@@ -1,0 +1,1582 @@
+{
+  "domain": {
+    "name": "Monopoly",
+    "source_document": "/Users/davidcruwys/dev/c#/P04DomainMonopolyV1/DOMAIN_INSTRUCTIONS.MD"
+  },
+  "artifacts": {
+    "logical": [
+      {
+        "bounded_context": {
+          "name": "Monopoly"
+        }
+      },
+      {
+        "aggregate_root": {
+          "name": "Monopoly"
+        }
+      },
+      {
+        "model": {
+          "name": "sample_model"
+        }
+      },
+      {
+        "value_object": {
+          "name": "sample_value"
+        }
+      }
+    ],
+    "structural": [
+      {
+        "command": "service",
+        "noun": "player",
+        "verb": "select-new-piece",
+        "description": "Each player chooses one token to represent him/her while traveling around the board.",
+        "full_command": "service:player:select-new-piece",
+        "artifact": "select-new-piece-service",
+        "descriptions": [
+          "Each player chooses one token to represent him/her while traveling around the board."
+        ],
+        "word_wrap_descriptions": [
+          "Each player chooses one token to represent him/her while traveling around the",
+          "board."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "select-new-piece",
+        "description": "Each player chooses one token to represent him/her while traveling around the board.",
+        "full_command": "action:player:select-new-piece",
+        "artifact": "select-new-piece-action",
+        "descriptions": [
+          "Each player chooses one token to represent him/her while traveling around the board."
+        ],
+        "word_wrap_descriptions": [
+          "Each player chooses one token to represent him/her while traveling around the",
+          "board."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "game",
+        "verb": "generate-title-deed",
+        "description": "Bank holds the Title Deed cards and houses and hotels prior to purchase and use by the players.",
+        "full_command": "action:game:generate-title-deed",
+        "artifact": "generate-title-deed-action",
+        "descriptions": [
+          "Bank holds the Title Deed cards and houses and hotels prior to purchase and use by the players."
+        ],
+        "word_wrap_descriptions": [
+          "Bank holds the Title Deed cards and houses and hotels prior to purchase and use",
+          "by the players."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "bank",
+        "verb": "pay-salary",
+        "description": "The Bank pays salaries and bonuses to players\n\nEach time a player's token lands on or passes over GO, whether by throwing the dice or drawing a card, the Banker pays him/her a $200 salary.",
+        "full_command": "action:bank:pay-salary",
+        "artifact": "pay-salary-action",
+        "descriptions": [
+          "The Bank pays salaries and bonuses to players",
+          "Each time a player's token lands on or passes over GO, whether by throwing the dice or drawing a card, the Banker pays him/her a $200 salary."
+        ],
+        "word_wrap_descriptions": [
+          "The Bank pays salaries and bonuses to players",
+          "Each time a player's token lands on or passes over GO, whether by throwing the",
+          "dice or drawing a card, the Banker pays him/her a $200 salary."
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "bank",
+        "verb": "hold-an-auction",
+        "description": "The bank sells and auctions properties",
+        "full_command": "service:bank:hold-an-auction",
+        "artifact": "hold-an-auction-service",
+        "descriptions": [
+          "The bank sells and auctions properties"
+        ],
+        "word_wrap_descriptions": [
+          "The bank sells and auctions properties"
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "bank",
+        "verb": "assign-title-deed",
+        "description": "hands out their proper Title Deed cards",
+        "full_command": "service:bank:assign-title-deed",
+        "artifact": "assign-title-deed-service",
+        "descriptions": [
+          "hands out their proper Title Deed cards"
+        ],
+        "word_wrap_descriptions": [
+          "hands out their proper Title Deed cards"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "bank",
+        "verb": "sell-house",
+        "description": "The bank sells houses and hotels to the players",
+        "full_command": "action:bank:sell-house|sell-hotel",
+        "artifact": "sell-house-action",
+        "descriptions": [
+          "The bank sells houses and hotels to the players"
+        ],
+        "word_wrap_descriptions": [
+          "The bank sells houses and hotels to the players"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "bank",
+        "verb": "sell-hotel",
+        "description": "The bank sells houses and hotels to the players",
+        "full_command": "action:bank:sell-house|sell-hotel",
+        "artifact": "sell-hotel-action",
+        "descriptions": [
+          "The bank sells houses and hotels to the players"
+        ],
+        "word_wrap_descriptions": [
+          "The bank sells houses and hotels to the players"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "bank",
+        "verb": "mortgage-property",
+        "description": "The bank loans money when required on mortgages",
+        "full_command": "action:bank:mortgage-property",
+        "artifact": "mortgage-property-action",
+        "descriptions": [
+          "The bank loans money when required on mortgages"
+        ],
+        "word_wrap_descriptions": [
+          "The bank loans money when required on mortgages"
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "bank",
+        "verb": "bank",
+        "description": "The Bank collects all taxes, fines, loans and interest, and the price of all properties which it sells and auctions.",
+        "full_command": "service:bank:bank",
+        "artifact": "bank-service",
+        "descriptions": [
+          "The Bank collects all taxes, fines, loans and interest, and the price of all properties which it sells and auctions."
+        ],
+        "word_wrap_descriptions": [
+          "The Bank collects all taxes, fines, loans and interest, and the price of all",
+          "properties which it sells and auctions."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "bank",
+        "verb": "collect-tax",
+        "description": "The Bank collects taxes from player.",
+        "full_command": "action:bank:collect-tax",
+        "artifact": "collect-tax-action",
+        "descriptions": [
+          "The Bank collects taxes from player."
+        ],
+        "word_wrap_descriptions": [
+          "The Bank collects taxes from player."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "bank",
+        "verb": "collect-fine",
+        "description": "The Bank collects fines from player",
+        "full_command": "action:bank:collect-fine",
+        "artifact": "collect-fine-action",
+        "descriptions": [
+          "The Bank collects fines from player"
+        ],
+        "word_wrap_descriptions": [
+          "The Bank collects fines from player"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "bank",
+        "verb": "government_bailout",
+        "description": "The Bank never \"goes broke.\" If the Bank runs out of money, the Banker may issue as much more as needed by writing on any ordinary paper.",
+        "full_command": "action:bank:government_bailout",
+        "artifact": "government_bailout-action",
+        "descriptions": [
+          "The Bank never \"goes broke.\" If the Bank runs out of money, the Banker may issue as much more as needed by writing on any ordinary paper."
+        ],
+        "word_wrap_descriptions": [
+          "The Bank never \"goes broke.\" If the Bank runs out of money, the Banker may issue",
+          "as much more as needed by writing on any ordinary paper."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "game",
+        "verb": "add-players-to-board",
+        "description": "Place player token on the square marked \"GO\"",
+        "full_command": "action:game:add-players-to-board",
+        "artifact": "add-players-to-board-action",
+        "descriptions": [
+          "Place player token on the square marked \"GO\""
+        ],
+        "word_wrap_descriptions": [
+          "Place player token on the square marked \"GO\""
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "game",
+        "verb": "sort-players",
+        "description": "Players sit in a circle around the board and each player in turn throws the dice",
+        "full_command": "action:game:sort-players",
+        "artifact": "sort-players-action",
+        "descriptions": [
+          "Players sit in a circle around the board and each player in turn throws the dice"
+        ],
+        "word_wrap_descriptions": [
+          "Players sit in a circle around the board and each player in turn throws the dice"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "game",
+        "verb": "roll-to-see-who-starts",
+        "description": "The player with the highest total starts the play.",
+        "full_command": "action:game:roll-to-see-who-starts",
+        "artifact": "roll-to-see-who-starts-action",
+        "descriptions": [
+          "The player with the highest total starts the play."
+        ],
+        "word_wrap_descriptions": [
+          "The player with the highest total starts the play."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "roll-dice",
+        "description": "throw the dice",
+        "full_command": "action:player:roll-dice",
+        "artifact": "roll-dice-action",
+        "descriptions": [
+          "throw the dice"
+        ],
+        "word_wrap_descriptions": [
+          "throw the dice"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "move-piece",
+        "description": "move your token in the direction of the arrow the number of spaces indicated by the dice",
+        "full_command": "action:player:move-piece",
+        "artifact": "move-piece-action",
+        "descriptions": [
+          "move your token in the direction of the arrow the number of spaces indicated by the dice"
+        ],
+        "word_wrap_descriptions": [
+          "move your token in the direction of the arrow the number of spaces indicated by",
+          "the dice"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "game",
+        "verb": "is-first-move",
+        "description": "For the very first move of the game, you can can read the current_die value as the throw already happened before start.",
+        "full_command": "predicate:game:is-first-move",
+        "artifact": "is-first-move",
+        "descriptions": [
+          "For the very first move of the game, you can can read the current_die value as the throw already happened before start."
+        ],
+        "word_wrap_descriptions": [
+          "For the very first move of the game, you can can read the current_die value as",
+          "the throw already happened before start."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "complete-my-turn",
+        "description": "After you have completed your play\n\nYour turn ends when you are sent to Jail.",
+        "full_command": "action:player:complete-my-turn",
+        "artifact": "complete-my-turn-action",
+        "descriptions": [
+          "After you have completed your play",
+          "Your turn ends when you are sent to Jail."
+        ],
+        "word_wrap_descriptions": [
+          "After you have completed your play",
+          "Your turn ends when you are sent to Jail."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "game",
+        "verb": "next-player-starts",
+        "description": "the turn passes to the player on your the left (clockwise).",
+        "full_command": "action:game:next-player-starts",
+        "artifact": "next-player-starts-action",
+        "descriptions": [
+          "the turn passes to the player on your the left (clockwise)."
+        ],
+        "word_wrap_descriptions": [
+          "the turn passes to the player on your the left (clockwise)."
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "player",
+        "verb": "player-landed",
+        "description": "According to the space your token reaches, you may be entitled to buy real estate or other properties — or obliged to pay rent, pay taxes, draw a Chance or Community Chest card, \"Go to Jail,\" etc.",
+        "full_command": "service:player:player-landed",
+        "artifact": "player-landed-service",
+        "descriptions": [
+          "According to the space your token reaches, you may be entitled to buy real estate or other properties — or obliged to pay rent, pay taxes, draw a Chance or Community Chest card, \"Go to Jail,\" etc."
+        ],
+        "word_wrap_descriptions": [
+          "According to the space your token reaches, you may be entitled to buy real",
+          "estate or other properties — or obliged to pay rent, pay taxes, draw a Chance or",
+          "Community Chest card, \"Go to Jail,\" etc."
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "player",
+        "verb": "double-thrown",
+        "description": "Retaining the dice, throw again and move your token as before.\n\nif you succeed in doing this you immediately move forward the number of spaces shown by your doubles throw",
+        "full_command": "predicate:player:double-thrown",
+        "artifact": "double-thrown",
+        "descriptions": [
+          "Retaining the dice, throw again and move your token as before.",
+          "if you succeed in doing this you immediately move forward the number of spaces shown by your doubles throw"
+        ],
+        "word_wrap_descriptions": [
+          "Retaining the dice, throw again and move your token as before.",
+          "if you succeed in doing this you immediately move forward the number of spaces",
+          "shown by your doubles throw"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "player",
+        "verb": "three-doubles-in-succession",
+        "description": "If you throw doubles three times in succession",
+        "full_command": "predicate:player:three-doubles-in-succession",
+        "artifact": "three-doubles-in-succession",
+        "descriptions": [
+          "If you throw doubles three times in succession"
+        ],
+        "word_wrap_descriptions": [
+          "If you throw doubles three times in succession"
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "player",
+        "verb": "go-to-jail",
+        "description": "move your token immediately to the space marked \"In Jail\"",
+        "full_command": "service:player:go-to-jail",
+        "artifact": "go-to-jail-service",
+        "descriptions": [
+          "move your token immediately to the space marked \"In Jail\""
+        ],
+        "word_wrap_descriptions": [
+          "move your token immediately to the space marked \"In Jail\""
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "player",
+        "verb": "passed-go",
+        "description": "player passing GO on the throw of the dice",
+        "full_command": "predicate:player:passed-go",
+        "artifact": "passed-go",
+        "descriptions": [
+          "player passing GO on the throw of the dice"
+        ],
+        "word_wrap_descriptions": [
+          "player passing GO on the throw of the dice"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "card",
+        "verb": "advance-to-go-drawn",
+        "description": "draws the \"Advance to GO\" card",
+        "full_command": "predicate:card:advance-to-go-drawn",
+        "artifact": "advance-to-go-drawn",
+        "descriptions": [
+          "draws the \"Advance to GO\" card"
+        ],
+        "word_wrap_descriptions": [
+          "draws the \"Advance to GO\" card"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "advance-to-go",
+        "description": "\"Advance to GO\"",
+        "full_command": "action:player:advance-to-go",
+        "artifact": "advance-to-go-action",
+        "descriptions": [
+          "\"Advance to GO\""
+        ],
+        "word_wrap_descriptions": [
+          "\"Advance to GO\""
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "player",
+        "verb": "buy-property-from-bank",
+        "description": "Buying Property",
+        "full_command": "service:player:buy-property-from-bank",
+        "artifact": "buy-property-from-bank-service",
+        "descriptions": [
+          "Buying Property"
+        ],
+        "word_wrap_descriptions": [
+          "Buying Property"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "bank",
+        "verb": "property-unowned",
+        "description": "unowned property",
+        "full_command": "predicate:bank:property-unowned",
+        "artifact": "property-unowned",
+        "descriptions": [
+          "unowned property"
+        ],
+        "word_wrap_descriptions": [
+          "unowned property"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "buy-unowned-property",
+        "description": "buy that property from the Bank at its printed price.",
+        "full_command": "action:player:buy-unowned-property",
+        "artifact": "buy-unowned-property-action",
+        "descriptions": [
+          "buy that property from the Bank at its printed price."
+        ],
+        "word_wrap_descriptions": [
+          "buy that property from the Bank at its printed price."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "bank",
+        "verb": "transfer-title-deed",
+        "description": "Title Deed card showing ownership",
+        "full_command": "action:bank:transfer-title-deed",
+        "artifact": "transfer-title-deed-action",
+        "descriptions": [
+          "Title Deed card showing ownership"
+        ],
+        "word_wrap_descriptions": [
+          "Title Deed card showing ownership"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "player",
+        "verb": "wish-to-buy-property",
+        "description": "wish to buy the property",
+        "full_command": "predicate:player:wish-to-buy-property",
+        "artifact": "wish-to-buy-property",
+        "descriptions": [
+          "wish to buy the property"
+        ],
+        "word_wrap_descriptions": [
+          "wish to buy the property"
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "bank",
+        "verb": "hold-auction",
+        "description": "Banker sells property at auction to the highest bidder.\n\nAny player, including the one who declined the option to buy it at the printed price, may bid. Bidding may start at any price.",
+        "full_command": "service:bank:hold-auction",
+        "artifact": "hold-auction-service",
+        "descriptions": [
+          "Banker sells property at auction to the highest bidder.",
+          "Any player, including the one who declined the option to buy it at the printed price, may bid. Bidding may start at any price."
+        ],
+        "word_wrap_descriptions": [
+          "Banker sells property at auction to the highest bidder.",
+          "Any player, including the one who declined the option to buy it at the printed",
+          "price, may bid. Bidding may start at any price."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "buy-property",
+        "description": "The buyer pays the Bank the amount of the bid in cash and receives the Title Deed card for that property.",
+        "full_command": "action:player:buy-property",
+        "artifact": "buy-property-action",
+        "descriptions": [
+          "The buyer pays the Bank the amount of the bid in cash and receives the Title Deed card for that property."
+        ],
+        "word_wrap_descriptions": [
+          "The buyer pays the Bank the amount of the bid in cash and receives the Title",
+          "Deed card for that property."
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "player",
+        "verb": "pay-rent",
+        "description": "Paying Rent",
+        "full_command": "service:player:pay-rent",
+        "artifact": "pay-rent-service",
+        "descriptions": [
+          "Paying Rent"
+        ],
+        "word_wrap_descriptions": [
+          "Paying Rent"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "property",
+        "verb": "owned-by",
+        "description": "property owned by another player",
+        "full_command": "predicate:property:owned-by",
+        "artifact": "owned-by",
+        "descriptions": [
+          "property owned by another player"
+        ],
+        "word_wrap_descriptions": [
+          "property owned by another player"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "collect-rent",
+        "description": "owner collects rent from you",
+        "full_command": "action:player:collect-rent",
+        "artifact": "collect-rent-action",
+        "descriptions": [
+          "owner collects rent from you"
+        ],
+        "word_wrap_descriptions": [
+          "owner collects rent from you"
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "property",
+        "verb": "get-title-deed",
+        "description": "Title Deed card",
+        "full_command": "query:property:get-title-deed",
+        "artifact": "get-title-deed-query",
+        "descriptions": [
+          "Title Deed card"
+        ],
+        "word_wrap_descriptions": [
+          "Title Deed card"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "property",
+        "verb": "is-mortgaged",
+        "description": "If the property is mortgaged",
+        "full_command": "predicate:property:is-mortgaged",
+        "artifact": "is-mortgaged",
+        "descriptions": [
+          "If the property is mortgaged"
+        ],
+        "word_wrap_descriptions": [
+          "If the property is mortgaged"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "player",
+        "verb": "owns-group",
+        "description": "It is advantage to hold all the Title Deed cards in a color group\n\nWhen you own all the properties in a color-group",
+        "full_command": "predicate:player:owns-group",
+        "artifact": "owns-group",
+        "descriptions": [
+          "It is advantage to hold all the Title Deed cards in a color group",
+          "When you own all the properties in a color-group"
+        ],
+        "word_wrap_descriptions": [
+          "It is advantage to hold all the Title Deed cards in a color group",
+          "When you own all the properties in a color-group"
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "property",
+        "verb": "get-rent-amount",
+        "description": "owner may then charge double rent for unimproved properties in that color-group\n\nIt is even more advantageous to have houses or hotels on properties because rents are much higher than for unimproved properties.",
+        "full_command": "query:property:get-rent-amount",
+        "artifact": "get-rent-amount-query",
+        "descriptions": [
+          "owner may then charge double rent for unimproved properties in that color-group",
+          "It is even more advantageous to have houses or hotels on properties because rents are much higher than for unimproved properties."
+        ],
+        "word_wrap_descriptions": [
+          "owner may then charge double rent for unimproved properties in that color-group",
+          "It is even more advantageous to have houses or hotels on properties because",
+          "rents are much higher than for unimproved properties."
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "player",
+        "verb": "asks-for-rent",
+        "description": "owner may not collect the rent if he/she fails to ask for it before the second player following throws the dice",
+        "full_command": "query:player:asks-for-rent",
+        "artifact": "asks-for-rent-query",
+        "descriptions": [
+          "owner may not collect the rent if he/she fails to ask for it before the second player following throws the dice"
+        ],
+        "word_wrap_descriptions": [
+          "owner may not collect the rent if he/she fails to ask for it before the second",
+          "player following throws the dice"
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "card",
+        "verb": "card",
+        "description": "Chance and Community Chest",
+        "full_command": "service:card:card",
+        "artifact": "card-service",
+        "descriptions": [
+          "Chance and Community Chest"
+        ],
+        "word_wrap_descriptions": [
+          "Chance and Community Chest"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "square",
+        "verb": "land-on-card",
+        "description": "When you land on either of these spaces",
+        "full_command": "predicate:square:land-on-card",
+        "artifact": "land-on-card",
+        "descriptions": [
+          "When you land on either of these spaces"
+        ],
+        "word_wrap_descriptions": [
+          "When you land on either of these spaces"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "card",
+        "verb": "take-card",
+        "description": "take the top card from the deck indicated",
+        "full_command": "action:card:take-card",
+        "artifact": "take-card-action",
+        "descriptions": [
+          "take the top card from the deck indicated"
+        ],
+        "word_wrap_descriptions": [
+          "take the top card from the deck indicated"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "card",
+        "verb": "follow-instructions",
+        "description": "follow the instructions",
+        "full_command": "action:card:follow-instructions",
+        "artifact": "follow-instructions-action",
+        "descriptions": [
+          "follow the instructions"
+        ],
+        "word_wrap_descriptions": [
+          "follow the instructions"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "card",
+        "verb": "return-card",
+        "description": "return the card face down to the bottom of the deck",
+        "full_command": "action:card:return-card",
+        "artifact": "return-card-action",
+        "descriptions": [
+          "return the card face down to the bottom of the deck"
+        ],
+        "word_wrap_descriptions": [
+          "return the card face down to the bottom of the deck"
+        ]
+      },
+      {
+        "command": "interface",
+        "noun": "card",
+        "verb": "get-out-of-jail",
+        "description": "\"Get Out of Jail Free\" card",
+        "full_command": "interface:card:get-out-of-jail",
+        "artifact": "i-get-out-of-jail",
+        "descriptions": [
+          "\"Get Out of Jail Free\" card"
+        ],
+        "word_wrap_descriptions": [
+          "\"Get Out of Jail Free\" card"
+        ]
+      },
+      {
+        "command": "interface",
+        "noun": "card",
+        "verb": "tradeable",
+        "description": "he/she may sell it",
+        "full_command": "interface:card:tradeable",
+        "artifact": "i-tradeable",
+        "descriptions": [
+          "he/she may sell it"
+        ],
+        "word_wrap_descriptions": [
+          "he/she may sell it"
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "player",
+        "verb": "trade-card-decision",
+        "description": "at any time",
+        "full_command": "query:player:trade-card-decision",
+        "artifact": "trade-card-decision-query",
+        "descriptions": [
+          "at any time"
+        ],
+        "word_wrap_descriptions": [
+          "at any time"
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "player",
+        "verb": "wants-to-buy-card",
+        "description": "to another player",
+        "full_command": "query:player:wants-to-buy-card",
+        "artifact": "wants-to-buy-card-query",
+        "descriptions": [
+          "to another player"
+        ],
+        "word_wrap_descriptions": [
+          "to another player"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "card-agreeable-price",
+        "description": "at an agreed price agreeable to both",
+        "full_command": "action:player:card-agreeable-price",
+        "artifact": "card-agreeable-price-action",
+        "descriptions": [
+          "at an agreed price agreeable to both"
+        ],
+        "word_wrap_descriptions": [
+          "at an agreed price agreeable to both"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "square",
+        "verb": "land-on-income-tax",
+        "description": "If you land on income tax",
+        "full_command": "predicate:square:land-on-income-tax",
+        "artifact": "land-on-income-tax",
+        "descriptions": [
+          "If you land on income tax"
+        ],
+        "word_wrap_descriptions": [
+          "If you land on income tax"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "pay-income-tax-estimate",
+        "description": "You may estimate your tax at $200 and pay the Bank",
+        "full_command": "action:player:pay-income-tax-estimate",
+        "artifact": "pay-income-tax-estimate-action",
+        "descriptions": [
+          "You may estimate your tax at $200 and pay the Bank"
+        ],
+        "word_wrap_descriptions": [
+          "You may estimate your tax at $200 and pay the Bank"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "pay-income-tax-calculated",
+        "description": "you may pay 10% of your total worth to the Bank",
+        "full_command": "action:player:pay-income-tax-calculated",
+        "artifact": "pay-income-tax-calculated-action",
+        "descriptions": [
+          "you may pay 10% of your total worth to the Bank"
+        ],
+        "word_wrap_descriptions": [
+          "you may pay 10% of your total worth to the Bank"
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "player",
+        "verb": "calculate-total-worth",
+        "description": "Your total worth is all your cash on hand, printed prices of mortgaged and unmortgaged properties and cost price of all buildings you own.",
+        "full_command": "query:player:calculate-total-worth",
+        "artifact": "calculate-total-worth-query",
+        "descriptions": [
+          "Your total worth is all your cash on hand, printed prices of mortgaged and unmortgaged properties and cost price of all buildings you own."
+        ],
+        "word_wrap_descriptions": [
+          "Your total worth is all your cash on hand, printed prices of mortgaged and",
+          "unmortgaged properties and cost price of all buildings you own."
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "player",
+        "verb": "income-tax-decision",
+        "description": "You must decide which option you will take before you add up your total worth.",
+        "full_command": "query:player:income-tax-decision",
+        "artifact": "income-tax-decision-query",
+        "descriptions": [
+          "You must decide which option you will take before you add up your total worth."
+        ],
+        "word_wrap_descriptions": [
+          "You must decide which option you will take before you add up your total worth."
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "square",
+        "verb": "land-on-super-tax",
+        "description": "If you land on super tax",
+        "full_command": "predicate:square:land-on-super-tax",
+        "artifact": "land-on-super-tax",
+        "descriptions": [
+          "If you land on super tax"
+        ],
+        "word_wrap_descriptions": [
+          "If you land on super tax"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "pay-super-tax",
+        "description": "you have to pay $100 super tax to the Bank.",
+        "full_command": "action:player:pay-super-tax",
+        "artifact": "pay-super-tax-action",
+        "descriptions": [
+          "you have to pay $100 super tax to the Bank."
+        ],
+        "word_wrap_descriptions": [
+          "you have to pay $100 super tax to the Bank."
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "game",
+        "verb": "go-to-jail",
+        "description": "You land in Jail when",
+        "full_command": "service:game:go-to-jail",
+        "artifact": "go-to-jail-service",
+        "descriptions": [
+          "You land in Jail when"
+        ],
+        "word_wrap_descriptions": [
+          "You land in Jail when"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "square",
+        "verb": "land-on-go-to-jail",
+        "description": "your token lands on the space marked \"Go to Jail\"",
+        "full_command": "predicate:square:land-on-go-to-jail",
+        "artifact": "land-on-go-to-jail",
+        "descriptions": [
+          "your token lands on the space marked \"Go to Jail\""
+        ],
+        "word_wrap_descriptions": [
+          "your token lands on the space marked \"Go to Jail\""
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "card",
+        "verb": "go-to-jail-drawn",
+        "description": "you draw a card marked \"Go to Jail\"",
+        "full_command": "predicate:card:go-to-jail-drawn",
+        "artifact": "go-to-jail-drawn",
+        "descriptions": [
+          "you draw a card marked \"Go to Jail\""
+        ],
+        "word_wrap_descriptions": [
+          "you draw a card marked \"Go to Jail\""
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "player",
+        "verb": "three-doubles-go-to-jail",
+        "description": "you throw doubles three times in succession",
+        "full_command": "predicate:player:three-doubles-go-to-jail",
+        "artifact": "three-doubles-go-to-jail",
+        "descriptions": [
+          "you throw doubles three times in succession"
+        ],
+        "word_wrap_descriptions": [
+          "you throw doubles three times in succession"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "square",
+        "verb": "land-on-just-visiting",
+        "description": "you are \"Just Visiting,\" you incur no penalty",
+        "full_command": "predicate:square:land-on-just-visiting",
+        "artifact": "land-on-just-visiting",
+        "descriptions": [
+          "you are \"Just Visiting,\" you incur no penalty"
+        ],
+        "word_wrap_descriptions": [
+          "you are \"Just Visiting,\" you incur no penalty"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "player",
+        "verb": "currently-in-jail",
+        "description": "Am I currently in jail",
+        "full_command": "predicate:player:currently-in-jail",
+        "artifact": "currently-in-jail",
+        "descriptions": [
+          "Am I currently in jail"
+        ],
+        "word_wrap_descriptions": [
+          "Am I currently in jail"
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "player",
+        "verb": "get-out-of-jail",
+        "description": "You get out of Jail by...",
+        "full_command": "service:player:get-out-of-jail",
+        "artifact": "get-out-of-jail-service",
+        "descriptions": [
+          "You get out of Jail by..."
+        ],
+        "word_wrap_descriptions": [
+          "You get out of Jail by..."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "in-jail-roll-dice-decision",
+        "description": "throwing doubles on any of your next three turns",
+        "full_command": "action:player:in-jail-roll-dice-decision",
+        "artifact": "in-jail-roll-dice-decision-action",
+        "descriptions": [
+          "throwing doubles on any of your next three turns"
+        ],
+        "word_wrap_descriptions": [
+          "throwing doubles on any of your next three turns"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "player",
+        "verb": "double-thrown-while-in-jail",
+        "description": "even though you had thrown doubles, you do not take another turn",
+        "full_command": "predicate:player:double-thrown-while-in-jail",
+        "artifact": "double-thrown-while-in-jail",
+        "descriptions": [
+          "even though you had thrown doubles, you do not take another turn"
+        ],
+        "word_wrap_descriptions": [
+          "even though you had thrown doubles, you do not take another turn"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "use-get-out-of-jail",
+        "description": "using the \"Get Out of Jail Free\"",
+        "full_command": "action:player:use-get-out-of-jail",
+        "artifact": "use-get-out-of-jail-action",
+        "descriptions": [
+          "using the \"Get Out of Jail Free\""
+        ],
+        "word_wrap_descriptions": [
+          "using the \"Get Out of Jail Free\""
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "player",
+        "verb": "has-get-out-of-jail",
+        "description": "card if you have it",
+        "full_command": "predicate:player:has-get-out-of-jail",
+        "artifact": "has-get-out-of-jail",
+        "descriptions": [
+          "card if you have it"
+        ],
+        "word_wrap_descriptions": [
+          "card if you have it"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "buy-get-out-of-jail",
+        "description": "purchasing the \"Get Out of Jail Free\"",
+        "full_command": "action:player:buy-get-out-of-jail",
+        "artifact": "buy-get-out-of-jail-action",
+        "descriptions": [
+          "purchasing the \"Get Out of Jail Free\""
+        ],
+        "word_wrap_descriptions": [
+          "purchasing the \"Get Out of Jail Free\""
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "player",
+        "verb": "players-with-get-out-of-jail",
+        "description": "card from another player",
+        "full_command": "query:player:players-with-get-out-of-jail",
+        "artifact": "players-with-get-out-of-jail-query",
+        "descriptions": [
+          "card from another player"
+        ],
+        "word_wrap_descriptions": [
+          "card from another player"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "pay-get-out-of-jail-fine",
+        "description": "paying a fine of $50 before you roll the dice on either of your next two turns.",
+        "full_command": "action:player:pay-get-out-of-jail-fine",
+        "artifact": "pay-get-out-of-jail-fine-action",
+        "descriptions": [
+          "paying a fine of $50 before you roll the dice on either of your next two turns."
+        ],
+        "word_wrap_descriptions": [
+          "paying a fine of $50 before you roll the dice on either of your next two turns."
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "game",
+        "verb": "free-Parking",
+        "description": "Free Parking",
+        "full_command": "service:game:free-Parking",
+        "artifact": "free-Parking-service",
+        "descriptions": [
+          "Free Parking"
+        ],
+        "word_wrap_descriptions": [
+          "Free Parking"
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "player",
+        "verb": "buy-house",
+        "description": "Houses\n\nyou may buy and erect at any time as many houses as your judgement and financial standing will allow. But you must build evenly, ie., you cannot erect more than one house on any one property of any color-group until you have built one house on every property of that group.\n\nYou may then begin on the second row of houses, and so on, up to a limit of four houses to a property.\n\nFor example, you cannot build three houses on one property if you have only one house on another property of that group.",
+        "full_command": "service:player:buy-house",
+        "artifact": "buy-house-service",
+        "descriptions": [
+          "Houses",
+          "you may buy and erect at any time as many houses as your judgement and financial standing will allow. But you must build evenly, ie., you cannot erect more than one house on any one property of any color-group until you have built one house on every property of that group.\n\nYou may then begin on the second row of houses, and so on, up to a limit of four houses to a property.\n\nFor example, you cannot build three houses on one property if you have only one house on another property of that group."
+        ],
+        "word_wrap_descriptions": [
+          "Houses",
+          "you may buy and erect at any time as many houses as your judgement and financial",
+          "standing will allow. But you must build evenly, ie., you cannot erect more than",
+          "one house on any one property of any color-group until you have built one house",
+          "on every property of that group.",
+          "You may then begin on the second row of houses, and so on, up to a limit of four",
+          "houses to a property.",
+          "For example, you cannot build three houses on one property if you have only one",
+          "house on another property of that group."
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "player",
+        "verb": "can-buy-house",
+        "description": "\n\nplayers wishing to build must wait for some player to return or sell his/her houses to the Bank before building\n\nWhen all the properties of a color-group are no longer mortgaged, the owner may begin to buy back houses at full price",
+        "full_command": "predicate:player:can-buy-house",
+        "artifact": "can-buy-house",
+        "descriptions": [
+          "players wishing to build must wait for some player to return or sell his/her houses to the Bank before building",
+          "When all the properties of a color-group are no longer mortgaged, the owner may begin to buy back houses at full price"
+        ],
+        "word_wrap_descriptions": [
+          "players wishing to build must wait for some player to return or sell his/her",
+          "houses to the Bank before building",
+          "When all the properties of a color-group are no longer mortgaged, the owner may",
+          "begin to buy back houses at full price"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "buy-house-decision",
+        "description": "you may buy houses from the Bank and erect them on those properties",
+        "full_command": "action:player:buy-house-decision",
+        "artifact": "buy-house-decision-action",
+        "descriptions": [
+          "you may buy houses from the Bank and erect them on those properties"
+        ],
+        "word_wrap_descriptions": [
+          "you may buy houses from the Bank and erect them on those properties"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "buy-house",
+        "description": "buy one house",
+        "full_command": "action:player:buy-house",
+        "artifact": "buy-house-action",
+        "descriptions": [
+          "buy one house"
+        ],
+        "word_wrap_descriptions": [
+          "buy one house"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "place-house-decision",
+        "description": "you may put it on any one of those properties. The next house you buy must be erected on one of the unimproved properties of this or any other complete color-group you may own.",
+        "full_command": "action:player:place-house-decision",
+        "artifact": "place-house-decision-action",
+        "descriptions": [
+          "you may put it on any one of those properties. The next house you buy must be erected on one of the unimproved properties of this or any other complete color-group you may own."
+        ],
+        "word_wrap_descriptions": [
+          "you may put it on any one of those properties. The next house you buy must be",
+          "erected on one of the unimproved properties of this or any other complete",
+          "color-group you may own."
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "player",
+        "verb": "get-rent-amount",
+        "description": "The owner still collects double rent from an opponent who lands on the unimproved properties of his/her complete color-group.",
+        "full_command": "query:player:get-rent-amount",
+        "artifact": "get-rent-amount-query",
+        "descriptions": [
+          "The owner still collects double rent from an opponent who lands on the unimproved properties of his/her complete color-group."
+        ],
+        "word_wrap_descriptions": [
+          "The owner still collects double rent from an opponent who lands on the",
+          "unimproved properties of his/her complete color-group."
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "player",
+        "verb": "buy-hotel",
+        "description": "Hotels\n\nhe/she may buy a hotel from the Bank and erect it on any property of the color-group.",
+        "full_command": "service:player:buy-hotel",
+        "artifact": "buy-hotel-service",
+        "descriptions": [
+          "Hotels",
+          "he/she may buy a hotel from the Bank and erect it on any property of the color-group."
+        ],
+        "word_wrap_descriptions": [
+          "Hotels",
+          "he/she may buy a hotel from the Bank and erect it on any property of the",
+          "color-group."
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "player",
+        "verb": "can-buy-hotel",
+        "description": "When a player has four houses on each property of a complete color-group\n\nOnly one hotel may be erected on any one property.\n\nplayers wishing to build must wait for some player to return or sell his/her houses to the Bank before building",
+        "full_command": "predicate:player:can-buy-hotel",
+        "artifact": "can-buy-hotel",
+        "descriptions": [
+          "When a player has four houses on each property of a complete color-group",
+          "Only one hotel may be erected on any one property.",
+          "players wishing to build must wait for some player to return or sell his/her houses to the Bank before building"
+        ],
+        "word_wrap_descriptions": [
+          "When a player has four houses on each property of a complete color-group",
+          "Only one hotel may be erected on any one property.",
+          "players wishing to build must wait for some player to return or sell his/her",
+          "houses to the Bank before building"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "remove-all-houses",
+        "description": "He/she returns the four houses from that property to the Bank",
+        "full_command": "action:player:remove-all-houses",
+        "artifact": "remove-all-houses-action",
+        "descriptions": [
+          "He/she returns the four houses from that property to the Bank"
+        ],
+        "word_wrap_descriptions": [
+          "He/she returns the four houses from that property to the Bank"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "buy-hotel",
+        "description": "pays the price for the hotel as shown\non the Title Deed card.",
+        "full_command": "action:player:buy-hotel",
+        "artifact": "buy-hotel-action",
+        "descriptions": [
+          "pays the price for the hotel as shown\non the Title Deed card."
+        ],
+        "word_wrap_descriptions": [
+          "pays the price for the hotel as shown",
+          "on the Title Deed card."
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "bank",
+        "verb": "building-shortage",
+        "description": "When the Bank has no houses to sell",
+        "full_command": "query:bank:building-shortage",
+        "artifact": "building-shortage-query",
+        "descriptions": [
+          "When the Bank has no houses to sell"
+        ],
+        "word_wrap_descriptions": [
+          "When the Bank has no houses to sell"
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "bank",
+        "verb": "auction-building",
+        "description": "If there are a limited number of houses and hotels available and two or more players wish to buy more than the Bank has, the houses or hotels must be sold at auction to the highest bidder",
+        "full_command": "service:bank:auction-building",
+        "artifact": "auction-building-service",
+        "descriptions": [
+          "If there are a limited number of houses and hotels available and two or more players wish to buy more than the Bank has, the houses or hotels must be sold at auction to the highest bidder"
+        ],
+        "word_wrap_descriptions": [
+          "If there are a limited number of houses and hotels available and two or more",
+          "players wish to buy more than the Bank has, the houses or hotels must be sold at",
+          "auction to the highest bidder"
+        ]
+      },
+      {
+        "command": "service",
+        "noun": "player",
+        "verb": "sell-property-other-player",
+        "description": "Sell Property\n\nthe owner may sell this mortgaged property to another player at any agreed price",
+        "full_command": "service:player:sell-property-other-player",
+        "artifact": "sell-property-other-player-service",
+        "descriptions": [
+          "Sell Property",
+          "the owner may sell this mortgaged property to another player at any agreed price"
+        ],
+        "word_wrap_descriptions": [
+          "Sell Property",
+          "the owner may sell this mortgaged property to another player at any agreed price"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "property",
+        "verb": "unimproved",
+        "description": "Unimproved properties",
+        "full_command": "predicate:property:unimproved",
+        "artifact": "unimproved",
+        "descriptions": [
+          "Unimproved properties"
+        ],
+        "word_wrap_descriptions": [
+          "Unimproved properties"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "property",
+        "verb": "private-sale-price-decision",
+        "description": "may be sold to any player as a private transaction for any amount the owner can get",
+        "full_command": "action:property:private-sale-price-decision",
+        "artifact": "private-sale-price-decision-action",
+        "descriptions": [
+          "may be sold to any player as a private transaction for any amount the owner can get"
+        ],
+        "word_wrap_descriptions": [
+          "may be sold to any player as a private transaction for any amount the owner can",
+          "get"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "property",
+        "verb": "improved",
+        "description": "if buildings are standing on any properties of that color-group",
+        "full_command": "predicate:property:improved",
+        "artifact": "improved",
+        "descriptions": [
+          "if buildings are standing on any properties of that color-group"
+        ],
+        "word_wrap_descriptions": [
+          "if buildings are standing on any properties of that color-group"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "sell-building-to-bank",
+        "description": "sold back to the Bank",
+        "full_command": "action:player:sell-building-to-bank",
+        "artifact": "sell-building-to-bank-action",
+        "descriptions": [
+          "sold back to the Bank"
+        ],
+        "word_wrap_descriptions": [
+          "sold back to the Bank"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "player",
+        "verb": "can-sell-property",
+        "description": "before the owner can sell any property of that color-group",
+        "full_command": "predicate:player:can-sell-property",
+        "artifact": "can-sell-property",
+        "descriptions": [
+          "before the owner can sell any property of that color-group"
+        ],
+        "word_wrap_descriptions": [
+          "before the owner can sell any property of that color-group"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "sell-building-decision",
+        "description": "Houses and hotels may be sold back to the Bank",
+        "full_command": "action:player:sell-building-decision",
+        "artifact": "sell-building-decision-action",
+        "descriptions": [
+          "Houses and hotels may be sold back to the Bank"
+        ],
+        "word_wrap_descriptions": [
+          "Houses and hotels may be sold back to the Bank"
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "property",
+        "verb": "sell-price",
+        "description": "one-half the price paid for them",
+        "full_command": "query:property:sell-price",
+        "artifact": "sell-price-query",
+        "descriptions": [
+          "one-half the price paid for them"
+        ],
+        "word_wrap_descriptions": [
+          "one-half the price paid for them"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "sell-house",
+        "description": "All houses on one color-group must be sold one by one, evenly",
+        "full_command": "action:player:sell-house",
+        "artifact": "sell-house-action",
+        "descriptions": [
+          "All houses on one color-group must be sold one by one, evenly"
+        ],
+        "word_wrap_descriptions": [
+          "All houses on one color-group must be sold one by one, evenly"
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "property",
+        "verb": "next-house-to-sell",
+        "description": "in reverse of the manner in which they were erected",
+        "full_command": "query:property:next-house-to-sell",
+        "artifact": "next-house-to-sell-query",
+        "descriptions": [
+          "in reverse of the manner in which they were erected"
+        ],
+        "word_wrap_descriptions": [
+          "in reverse of the manner in which they were erected"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "sell-hotel",
+        "description": "All hotels on one color group may be sold at once, or they may be sold one hotel at a time",
+        "full_command": "action:player:sell-hotel",
+        "artifact": "sell-hotel-action",
+        "descriptions": [
+          "All hotels on one color group may be sold at once, or they may be sold one hotel at a time"
+        ],
+        "word_wrap_descriptions": [
+          "All hotels on one color group may be sold at once, or they may be sold one hotel",
+          "at a time"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "downgrade-hotel-to-houses",
+        "description": "one hotel equals five houses",
+        "full_command": "action:player:downgrade-hotel-to-houses",
+        "artifact": "downgrade-hotel-to-houses-action",
+        "descriptions": [
+          "one hotel equals five houses"
+        ],
+        "word_wrap_descriptions": [
+          "one hotel equals five houses"
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "property",
+        "verb": "next-hotel-to-sell",
+        "description": "in reverse of the manner in which they were erected",
+        "full_command": "query:property:next-hotel-to-sell",
+        "artifact": "next-hotel-to-sell-query",
+        "descriptions": [
+          "in reverse of the manner in which they were erected"
+        ],
+        "word_wrap_descriptions": [
+          "in reverse of the manner in which they were erected"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "property",
+        "verb": "can-be-mortgaged",
+        "description": "Unimproved properties can be mortgaged through the Bank at any time. Before an improved property can be mortgaged, all the buildings on all the properties of its color-group must be sold back to the Bank at half price",
+        "full_command": "predicate:property:can-be-mortgaged",
+        "artifact": "can-be-mortgaged",
+        "descriptions": [
+          "Unimproved properties can be mortgaged through the Bank at any time. Before an improved property can be mortgaged, all the buildings on all the properties of its color-group must be sold back to the Bank at half price"
+        ],
+        "word_wrap_descriptions": [
+          "Unimproved properties can be mortgaged through the Bank at any time. Before an",
+          "improved property can be mortgaged, all the buildings on all the properties of",
+          "its color-group must be sold back to the Bank at half price"
+        ]
+      },
+      {
+        "command": "query",
+        "noun": "property",
+        "verb": "mortgage-value",
+        "description": "The mortgage value is printed on each Title Deed card.",
+        "full_command": "query:property:mortgage-value",
+        "artifact": "mortgage-value-query",
+        "descriptions": [
+          "The mortgage value is printed on each Title Deed card."
+        ],
+        "word_wrap_descriptions": [
+          "The mortgage value is printed on each Title Deed card."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "property",
+        "verb": "collect-rent",
+        "description": "No rent can be collected on mortgaged properties or utilities",
+        "full_command": "action:property:collect-rent",
+        "artifact": "collect-rent-action",
+        "descriptions": [
+          "No rent can be collected on mortgaged properties or utilities"
+        ],
+        "word_wrap_descriptions": [
+          "No rent can be collected on mortgaged properties or utilities"
+        ]
+      },
+      {
+        "command": "predicate",
+        "noun": "player",
+        "verb": "can-collect-rent",
+        "description": "rent can be collected on unmortgaged properties in the same group",
+        "full_command": "predicate:player:can-collect-rent",
+        "artifact": "can-collect-rent",
+        "descriptions": [
+          "rent can be collected on unmortgaged properties in the same group"
+        ],
+        "word_wrap_descriptions": [
+          "rent can be collected on unmortgaged properties in the same group"
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "pay-mortgage",
+        "description": "In order to lift the mortgage, the owner must pay the Bank the amount of the mortgage plus 10% interest.\n\nIf you are the new owner, you may lift the mortgage at once if you wish by paying off the mortgage plus 10% interest to the Bank.",
+        "full_command": "action:player:pay-mortgage",
+        "artifact": "pay-mortgage-action",
+        "descriptions": [
+          "In order to lift the mortgage, the owner must pay the Bank the amount of the mortgage plus 10% interest.",
+          "If you are the new owner, you may lift the mortgage at once if you wish by paying off the mortgage plus 10% interest to the Bank."
+        ],
+        "word_wrap_descriptions": [
+          "In order to lift the mortgage, the owner must pay the Bank the amount of the",
+          "mortgage plus 10% interest.",
+          "If you are the new owner, you may lift the mortgage at once if you wish by",
+          "paying off the mortgage plus 10% interest to the Bank."
+        ]
+      },
+      {
+        "command": "action",
+        "noun": "player",
+        "verb": "pay-mortgage-surcharge",
+        "description": "If the mortgage is not lifted at once, you must pay the Bank 10% interest when you buy the property",
+        "full_command": "action:player:pay-mortgage-surcharge",
+        "artifact": "pay-mortgage-surcharge-action",
+        "descriptions": [
+          "If the mortgage is not lifted at once, you must pay the Bank 10% interest when you buy the property"
+        ],
+        "word_wrap_descriptions": [
+          "If the mortgage is not lifted at once, you must pay the Bank 10% interest when",
+          "you buy the property"
+        ]
+      }
+    ]
+  }
+}

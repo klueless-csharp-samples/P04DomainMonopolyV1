@@ -1,5 +1,5 @@
 ---
-format_artifacts      : ['repeats:1','command:9','noun:8','verb:30','artifact:35','xfull_command:50','description:50']
+format_artifacts      : ['repeats:1','command:9','noun:8','verb:30', 'options:10' ,'artifact:35','xfull_command:50','description:50']
 show_artifacts        : 1
 show_config           : 0
 show_all_stats        : 0
@@ -7,7 +7,7 @@ show_filtered_stats   : 1
 generate_rc           : 1
 generate_filtered_rc  : 1 # TODO
 use_filter            : 1
-pagination            : [1, 1, 20]
+pagination            : [0, 1, 20]
 word_wrap             : 80
 # order_by              : ['noun:asc', 'verb', 'command:asc'] # natural, command, noun, verb, artifact
 filter:
@@ -17,7 +17,7 @@ filter:
   exclude_interfaces  : 0
   exclude_services    : 0
   domain_nouns        : 'all' # all || [player, game, bank, property, card, square]
-  # search              : 'xmen|blah'
+  # search              : 'xxx'
   # search              : 'hotel|house|building'
   # search              : 'pay-mortgage'
   # search              : '(?=.*sell)(?=.*property)'
@@ -40,6 +40,7 @@ generate_clean_md:    # TODO
   file                : 'DOMAIN.MD'
 ---
 
+
 # Monopoly
 
 ## Refactor
@@ -50,13 +51,13 @@ generate_clean_md:    # TODO
 
 ### Constraints:
 
-- 3 dice,
+- 3 dice
 - Pieces
   - car, iron, lantern, thimble, shoe, top-hat, rocking horse, battleship and cannon
 - 32 houses
 - 12 hotels
 - Chance and Community Chest Cards
-- Title Deed cards
+- Title Deed Cards
 - Play money and a Banker's tray
 
 ## Classic Monopoly Rules
@@ -69,8 +70,8 @@ Each player chooses one token to represent him/her while traveling around the bo
 
 The object of the game is to become the wealthiest player through buying, renting and selling property.
 
-{action:player:select-new-piece}
-Each player chooses one token to represent him/her while traveling around the board.
+{action:player:select-new-piece:-md-remove}
+Player chooses one available token to represent him/her while traveling around the board.
 {/action}
 
 ### Banker

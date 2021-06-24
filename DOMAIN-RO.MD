@@ -8,13 +8,13 @@
 
 ### Constraints:
 
-- 3 dice,
+- 3 dice
 - Pieces
   - car, iron, lantern, thimble, shoe, top-hat, rocking horse, battleship and cannon
 - 32 houses
 - 12 hotels
 - Chance and Community Chest Cards
-- Title Deed cards
+- Title Deed Cards
 - Play money and a Banker's tray
 
 ## Classic Monopoly Rules
@@ -27,8 +27,6 @@ Each player chooses one token to represent him/her while traveling around the bo
 
 The object of the game is to become the wealthiest player through buying, renting and selling property.
 
-
-Each player chooses one token to represent him/her while traveling around the board.
 
 
 ### Banker
